@@ -1,0 +1,48 @@
+{
+  "name": "lets-design-react-app",
+  "version": "0.1.0",
+  "description": "Example project for Let's Design React Application article on Medium",
+  "main": "src/main.js",
+  "repository": "git@github.com:vadirn/lets-design-react-app.git",
+  "author": "Vadim Kotov <igeeko@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "watch": "export $(cat .env-watch | grep -v ^# | xargs) && npm run clean && npm run prerender && webpack --config webpack.config.js --watch",
+    "build": "export $(cat .env-build | grep -v ^# | xargs) && npm run clean && npm run prerender && webpack --config webpack.config.js",
+    "clean": "rm -rf ./build/**",
+    "prerender": "node ./scripts/prerender.js"
+  },
+  "dependencies": {
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-transform-react-constant-elements": "^6.22.0",
+    "babel-plugin-transform-react-inline-elements": "^6.22.0",
+    "babel-polyfill": "^6.22.0",
+    "babel-preset-latest": "^6.22.0",
+    "components-di": "^0.1.0",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "beta",
+    "normalize.css": "^5.0.0",
+    "object-state-storage": "^2.0.2",
+    "postcss-color-function": "^3.0.0",
+    "postcss-custom-media": "^5.0.1",
+    "postcss-custom-properties": "^5.0.2",
+    "postcss-loader": "^1.3.0",
+    "postcss-smart-import": "^0.6.7",
+    "react": "^15.4.2",
+    "react-css-modules": "^4.1.0",
+    "react-dom": "^15.4.2",
+    "session-controller": "^0.2.5",
+    "style-loader": "^0.13.1",
+    "webpack": "^2.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.15.0",
+    "eslint-config-react-app": "^0.5.1",
+    "eslint-plugin-flowtype": "^2.30.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.9.0",
+    "jest": "^18.1.0"
+  }
+}
