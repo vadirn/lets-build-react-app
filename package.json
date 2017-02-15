@@ -14,15 +14,29 @@
   },
   "babel": {
     "presets": [
-      ["latest", { "es2015": { "modules": false } }],
-      ["react"],
-      ["env", {
-        "useBuiltIns": true,
-        "debug": false,
-        "targets": {
-          "browsers": ["last 3 versions"]
+      [
+        "latest",
+        {
+          "es2015": {
+            "modules": false
+          }
         }
-      }]
+      ],
+      [
+        "react"
+      ],
+      [
+        "env",
+        {
+          "useBuiltIns": true,
+          "debug": false,
+          "targets": {
+            "browsers": [
+              "last 3 versions"
+            ]
+          }
+        }
+      ]
     ],
     "env": {
       "production": {
@@ -34,11 +48,11 @@
     }
   },
   "dependencies": {
-    "babel-core": "^6.22.1",
-    "babel-loader": "^6.2.10",
-    "babel-plugin-transform-react-constant-elements": "^6.22.0",
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.0",
+    "babel-plugin-transform-react-constant-elements": "^6.23.0",
     "babel-plugin-transform-react-inline-elements": "^6.22.0",
-    "babel-polyfill": "^6.22.0",
+    "babel-polyfill": "^6.23.0",
     "babel-preset-latest": "^6.22.0",
     "components-di": "^0.1.0",
     "css-loader": "^0.26.1",
@@ -59,8 +73,6 @@
   },
   "devDependencies": {
     "eslint": "^3.15.0",
-    "eslint-config-react-app": "^0.5.1",
-    "eslint-plugin-flowtype": "^2.30.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.9.0",
