@@ -12,49 +12,17 @@
     "clean": "rm -rf ./build/**",
     "prerender": "node ./scripts/prerender.js"
   },
-  "babel": {
-    "presets": [
-      [
-        "latest",
-        {
-          "es2015": {
-            "modules": false
-          }
-        }
-      ],
-      [
-        "react"
-      ],
-      [
-        "env",
-        {
-          "useBuiltIns": true,
-          "debug": false,
-          "targets": {
-            "browsers": [
-              "last 3 versions"
-            ]
-          }
-        }
-      ]
-    ],
-    "env": {
-      "production": {
-        "plugins": [
-          "transform-react-inline-elements",
-          "transform-react-constant-elements"
-        ]
-      }
-    }
-  },
   "dependencies": {
     "babel-core": "^6.23.1",
-    "babel-loader": "^6.3.0",
+    "babel-loader": "^6.3.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-plugin-transform-react-constant-elements": "^6.23.0",
     "babel-plugin-transform-react-inline-elements": "^6.22.0",
     "babel-polyfill": "^6.23.0",
-    "babel-preset-latest": "^6.22.0",
-    "components-di": "^0.1.0",
+    "babel-preset-env": "^1.1.8",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "components-di": "^0.1.2",
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "beta",
     "normalize.css": "^5.0.0",
@@ -75,7 +43,7 @@
     "eslint": "^3.15.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.9.0",
+    "eslint-plugin-react": "^6.10.0",
     "jest": "^18.1.0"
   }
 }

@@ -1,0 +1,35 @@
+{
+  "presets": [
+    [
+      "latest",
+      {
+        "es2015": {
+          "modules": false
+        }
+      }
+    ],
+    [
+      "react"
+    ],
+    [
+      "env",
+      {
+        "useBuiltIns": true,
+        "debug": false,
+        "targets": {
+          "browsers": [
+            "last 3 versions"
+          ]
+        }
+      }
+    ]
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        "transform-react-constant-elements"
+      ]
+    },
+  },
+  "plugins": ["transform-object-rest-spread"]
+}
